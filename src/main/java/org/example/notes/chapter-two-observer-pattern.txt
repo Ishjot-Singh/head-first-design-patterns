@@ -1,0 +1,4 @@
+Publishers (Subjects) + Subscribers (Observers) = Observer Pattern
+Observers are the clients who will be notified of any changes in the subject.
+Ex: Subject is an int variable. Whenever this variable changes, its observers (subscribers) will be notified of the change.
+
