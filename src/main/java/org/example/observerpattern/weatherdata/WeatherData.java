@@ -11,8 +11,11 @@ public class WeatherData implements Subject {
     private float humidity;
     private float pressure;
 
+    private HeatIndex heatIndex;
+
     public WeatherData(){
         observers = new ArrayList();
+        heatIndex = new HeatIndex();
     }
     @Override
     public void registerObserver(Observer o) {
@@ -31,7 +34,7 @@ public class WeatherData implements Subject {
     public void notifyObservers() {
         for(int i = 0; i < observers.size(); i++){
             Observer obj = (Observer) observers.get(i);
-            obj.update(temp, humidity, pressure);
+            obj.update(temp, humidity, pressure, heatIndex);
         }
     }
 
