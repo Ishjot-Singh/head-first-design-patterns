@@ -5,8 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SwingObserverExample {
+public class SwingObserverExample extends Frame {
     JFrame frame;
+    private JPanel panel;
 
     public static void main(String[] args) {
         SwingObserverExample swingObserverExample = new SwingObserverExample();
@@ -15,10 +16,16 @@ public class SwingObserverExample {
 
     public void go(){
         frame = new JFrame();
+        panel = new JPanel();
+        frame.setContentPane(panel);
+        frame.pack();
+        frame.setVisible(true);
+        frame.setSize(400, 500);
         JButton button = new JButton("Should I do it?");
         button.addActionListener(new AngelListener());
         button.addActionListener(new DevilListener());
         frame.getContentPane().add(BorderLayout.CENTER, button);
+        frame.add(button);
     }
 
     class AngelListener implements ActionListener{
