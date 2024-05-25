@@ -1,0 +1,45 @@
+Publishers (Subjects) + Subscribers (Observers) = Observer Pattern
+Observers are the clients who will be notified of any changes in the subject.
+Ex: Subject is an int variable. Whenever this variable changes, its observers (subscribers) will be notified of the change.
+
+
+Observer Pattern Definition:
+The Observer Pattern defines a one-to-many
+dependency between objects so that when one
+object changes state, all of its dependents are
+notified and updated automatically
+
+The Observer Pattern provides an object design where
+subjects and observers are loosely coupled.
+
+Java has built-in support for the Observer pattern.
+
+Internally, a class called "Observable" exists under the java.util package. This class is what we called the Subject above.
+Out of the box, this class gives us all of the functionality, adding-removing-notifying-setting methods. So any of our concrete Subject classes will extend this class.
+For the "Observer" we have an interface, we override the update method for all of our observers.
+
+// PUSH IMPLEMENTATION - The observable pushes the state change to the observers
+Built-in Observer pattern working:
+For an Object to become an observer...
+Implement the Observer interface (this time the java.util.Observer
+interface) and call addObserver() on any Observable object. Likewise, to remove
+yourself as an observer just call deleteObserver().
+
+For the Observable to send notifications...
+extending the java.util.Observable
+superclass. From there it is a two-step process:
+1. You first must call the setChanged() method to signify
+   that the state has changed in your object
+2. Then, call one of two notifyObservers() methods:
+   notifyObservers() or notifyObservers(Object arg)
+
+For an Observer to receive notifications...
+It implements the update method
+Method signature: update(Observable o, Object arg)
+
+// PULL IMPLEMENTATION - The observers read the required data from the observable as required.
+This means that instead of sending over the entire state to all observers, the observers will only read the state relevant to them.
+Thereby, fulfilling the need-to-know functionality for the observers.
+
+
+

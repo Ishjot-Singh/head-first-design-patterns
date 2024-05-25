@@ -1,0 +1,17 @@
+1st Design Principle:
+Identify the aspects of your application that vary and separate them from what stays the same
+i.e, take the parts that vary and encapsulate them, so that later you can alter or extend the parts that vary without affecting those that don’t.
+
+2nd Design Principle:
+Program to an interface, not an implementation.
+
+3rd Design Principle:
+Favor composition over inheritance.
+
+4th Design Principle:
+Strive for loosely coupled designs
+between objects that interact.
+
+5th Design Principle:
+Classes should be open for extension,
+but closed for modification.
