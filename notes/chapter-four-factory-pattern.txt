@@ -1,0 +1,27 @@
+Factories handle the details of object creation.
+
+Factory Pattern Definition:
+The Factory Method Pattern defines an interface
+for creating an object, but lets subclasses decide which
+class to instantiate. Factory Method lets a class defer
+instantiation to subclasses.
+
+Method in the interface used for creating objects is called
+the "Factory Method".
+
+Players of the Factory Pattern:
+1. Creators:
+Classes that produce products are called concrete creators.
+These concrete creators extend an abstract creator class.
+These subclasses are tasked with producing the actual "products"
+
+2. Products:
+The factories produce "Products". For example, in our case - the product
+is Pizza.
+The product class is again subclasses by "Concrete Products". In our example
+the Concrete Products are the different kinds of Pizzas like NYCheesePizza.
+
+Advantages of the Factory Pattern:
+Avoids duplication in the code
+Provides one place to perform maintenance.
+Clients depend only upon interfaces to instantiate objects

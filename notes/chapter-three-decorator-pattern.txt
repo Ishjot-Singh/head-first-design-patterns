@@ -7,7 +7,7 @@ Decorator pattern helps us implement the Open-Closed principle
 As the Open-Closed principle adds abstraction and complexity to our application
 we should only concentrate on implementing it in places that are likely to change.
 
-Decorator Pattern definition:
+Decorator Pattern Definition:
 The Decorator Pattern attaches additional
 responsibilities to an object dynamically.
 Decorators provide a flexible alternative to
@@ -21,6 +21,11 @@ but we aren’t using inheritance to get behavior.
 We add behavior to the decorator using composition, i.e, by having the base component in
 the decorators.
 
+Decorator classes mirror the type of the components they
+decorate. (In fact, they are the same type as the components
+they decorate, either through inheritance or interface
+implementation.)
+
 Composition helps define behavior at run-time
 rather than at compile time as is in the case
 of inheritance.
@@ -30,3 +35,12 @@ other patterns like Factory and Builder.
 This is done since with the Decorator pattern we
 have to manage more objects and aforementioned patterns
 help us with object creation.
+
+Java I/O libraries are notoriously difficult for
+people to understand at first. But if they just saw the classes as a set of wrappers
+around an InputStream, life would be much easier
+
+Downside of the Decorator pattern:
+Designs using this pattern often result in a large number of small classes
+that can be overwhelming to a developer trying to use the Decorator-based
+API.
