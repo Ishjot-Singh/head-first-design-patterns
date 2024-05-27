@@ -7,7 +7,7 @@ Decorator pattern helps us implement the Open-Closed principle
 As the Open-Closed principle adds abstraction and complexity to our application
 we should only concentrate on implementing it in places that are likely to change.
 
-Decorator Pattern definition:
+Decorator Pattern Definition:
 The Decorator Pattern attaches additional
 responsibilities to an object dynamically.
 Decorators provide a flexible alternative to
