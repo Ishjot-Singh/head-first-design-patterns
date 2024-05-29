@@ -25,3 +25,7 @@ Advantages of the Factory Pattern:
 Avoids duplication in the code
 Provides one place to perform maintenance.
 Clients depend only upon interfaces to instantiate objects
+
+Factory pattern is one of the most powerful techniques for
+adhering to the DI principle as it makes the code
+rely on abstractions rather than on concrete classes.
