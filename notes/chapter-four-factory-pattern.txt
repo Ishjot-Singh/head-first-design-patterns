@@ -29,3 +29,16 @@ Clients depend only upon interfaces to instantiate objects
 Factory pattern is one of the most powerful techniques for
 adhering to the DI principle as it makes the code
 rely on abstractions rather than on concrete classes.
+
+Abstract Factory Pattern Definition:
+The Abstract Factory Pattern provides an interface
+for creating families of related or dependent objects
+without specifying their concrete classes.
+
+Abstract Factory Pattern creates objects via composition
+as opposed to inheritance which is used by Factory Pattern.
+
+All factory patterns promote
+loose coupling by reducing the
+dependency of your application
+on concrete classes.

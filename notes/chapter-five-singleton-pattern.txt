@@ -1,0 +1,44 @@
+"One of a kind objects!"
+
+Q. Why do we need a singleton, i.e, only one object of something?
+
+A. There are many objects we only need one of: thread pools, caches, dialog boxes, objects that handle
+   preferences and registry settings, objects used for logging, and objects that act as device drivers to devices
+
+Lazy Instantiation means creating an object if we need it.
+
+Singleton Pattern Definition:
+The Singleton Pattern ensures a class has only one
+instance, and provides a global point of access to it.
+
+Q. How do we handle Singletons with Multi-threading?
+
+A. We can fix the issues (multiple instantiations by threads) by
+   adding the "synchronized" keyword in front of the getInstance() method.
+   This keyword ensures that every thread waits its turn before entering the method.
+
+   Downside:
+   The synchronized keyword adds additional overhead as it is only relevant
+   for the first call to the getInstance method. Post which it is unneeded overhead.
+   It can decrease the performance of the method by a factor of 100.
+
+   How to combat the downsides?
+   1. We can move to an eager initialization rather than a lazy one.
+      Here, we create an object instance in the static initializer itself.
+      This ensures thread-safety as the uniqueInstance of the Singleton is
+      created when the class is loaded.
+
+   2. We can make use of double-checked-locking
+      Using this we add two if-conditions to our code.
+      We first check if the uniqueInstance is null, then we proceed
+      to call synchronized before checking for null again.
+      This means that this part of the code only runs once
+      i.e, synchronized is only called on once, during the first initialization.
+      Thereby, minimizing overhead.
+      We declare the static singleton variable as "volatile".
+      This keyword ensures that multiple threads handle the uniqueInstance variable correctly.
+
+Two class-loaders can end up with their own instance of Singletons as well.
+This happens as every class loader defines a namespace. If there are two or more of these
+the same class can be loaded multiple times.
+To combat this, we can specify the class-loader ourselves.
