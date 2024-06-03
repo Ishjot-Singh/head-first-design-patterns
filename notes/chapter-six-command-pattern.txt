@@ -10,3 +10,24 @@ undoable operations.
 The Meta Command Pattern allows you to create
 macros of commands so that you can execute multiple commands
 at once.
+
+Macro Commands: A kind of command that can execute other commands
+
+Uses of the Command Pattern:
+1. Queueing requests
+   Commands can be added to a queue on one end and be removed on the other
+   end; a thread can then call execute() on them, wait for the method execution
+   to finish, discard it and then fetch a new command.
+
+   The job queue classes are totally decoupled from the objects that are doing the computation. One minute a thread may be
+   computing a financial computation, and the next it may be retrieving
+   something from the network. The job queue objects don’t care; they
+   just retrieve commands and call execute().
+
+2. Logging requests
+   The semantics of some applications require that we log all actions and be able to
+   recover after a crash by re-invoking those actions. The Command Pattern can support
+   these semantics with the addition of two methods: store() and load().
+   As we execute commands, we store a history of them on disk.
+   When a crash occurs, we reload the command objects and invoke their execute()
+   methods in batch and in order.
