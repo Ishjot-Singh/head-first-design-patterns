@@ -1,0 +1,21 @@
+What is an OO adapter?
+Something that takes an interface and adapts it to the one
+that the client is expecting.
+
+How does the client use the adapter?
+The client makes a call to the "target" interface.
+The adapter implements this target interface and
+translates the request for the adaptee interface.
+
+Client -> The one making the request
+Adapter -> It implements the requested interface and translates the request to the other interface
+Adaptee -> The interface being adapted for. Ex: TurkeyAdapter implements Duck (expected by client)
+           and converts Duck method calls to Turkey Calls.
+
+Adapter Pattern Definition:
+The Adapter Pattern converts the interface of a class
+into another interface the clients expect. Adapter lets
+classes work together that could not otherwise because of
+incompatible interfaces.
+
+The Adapter pattern helps decouple the client from the actual interface.
