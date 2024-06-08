@@ -19,3 +19,16 @@ classes work together that could not otherwise because of
 incompatible interfaces.
 
 The Adapter pattern helps decouple the client from the actual interface.
+
+Adapter pattern uses a lot of good OO design principles, such as:
+1. The use of object composition to wrap the adaptee with an altered interface.
+   This approach has the added advantage that we can use an adapter with any subclass of the adaptee.
+
+2. The pattern binds the client to an interface, not an
+   implementation; thus, we could use several adapters, each converting a different backend
+   set of classes. Or, we could add new implementations after the fact, as long as they
+   adhere to the Target interface
+
+There are two types of Adapter patterns:
+Object Adapter - the Adapter is composed of the adaptee and implements the Target.
+Class Adapter - used in case of multiple inheritance (not supported by JAVA); the Adapter subclasses the adaptee here.
