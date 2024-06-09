@@ -1,0 +1,23 @@
+Facade Pattern Definition:
+The Facade Pattern provides a unified interface to a set of interfaces in a subsystem.
+Facade defines a higher level interface that makes the subsystem easier to use.
+
+Q. What does the Facade Pattern do?
+A. It alters an interface, in order to simplify it.
+
+Q. What is the difference between Adapter and Facade Pattern?
+A. Facades and adapters may wrap multiple classes, but a
+   facade’s intent is to simplify, while an adapter’s is
+   to convert the interface to something different
+
+   The Adapter Pattern changes the interface of one or more classes into one interface that a client is expecting.
+   We may need to adapt many classes to provide the interface a client is coded to.
+   Likewise, a Facade may provide a simplified interface to a single class with a very complex interface.
+
+   The difference between the two is not in the "number" of classes they wrap but in their "intent".
+   Adapter Pattern's intent is to alter an interface so that it matches what the client expects
+   whereas Facade's intent is to provide a simplified interface to a subsystem.
+
+A facade not only simplifies an interface, it
+decouples a client from a subsystem of components.
+
