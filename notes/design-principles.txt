@@ -26,22 +26,31 @@ between objects that interact.
                                    high-level components should not depend on our low-level
                                    components; rather, they should both depend on abstractions.
 
-
+7th Design Principle:
+"Principle of Least Knowledge" aka Law of Demeter - A class should only "talk" to its immediate friends.
+                                                    Essentially, it states that the classes should be as
+                                                    decoupled from each other as possible.
 
 FAQs:
-1. Where does the "Inversion" in DI Principle come from?
+Q. Where does the "Inversion" in DI Principle come from?
 
-The “inversion” in the name Dependency Inversion
-Principle is there because it inverts the way you
-typically might think about your OO design.
-Low-level components now depend on a higher level
-abstraction. Likewise, the high-level component
-is also tied to the same abstraction.
+A. The “inversion” in the name Dependency Inversion
+   Principle is there because it inverts the way you
+   typically might think about your OO design.
+   Low-level components now depend on a higher level
+   abstraction. Likewise, the high-level component
+   is also tied to the same abstraction.
 
-2. What are some guidelines for following the DI principle?
+Q. What are some guidelines for following the DI principle?
 
-These are the general "guidelines" to keep in mind. Please note that they are not
-strict rules otherwise it would be impossible for us to write even a single java program xD
-a. No variable should hold a reference to a concrete class. (Use a factory instead)
-b. No class should derive from a concrete class. (Use interfaces/abstract classes)
-c. No implemented method in the base abstract class should be overridden by any subclasses.
+A. These are the general "guidelines" to keep in mind. Please note that they are not
+   strict rules otherwise it would be impossible for us to write even a single java program xD
+        a. No variable should hold a reference to a concrete class. (Use a factory instead)
+        b. No class should derive from a concrete class. (Use interfaces/abstract classes)
+        c. No implemented method in the base abstract class should be overridden by any subclasses.
+
+Q. What are the disadvantages of the Principle of Least Knowledge?
+
+A. Applying this principle results in more “wrapper” classes being written to handle
+   method calls to other components. This can result in increased complexity and
+   development time as well as decreased runtime performance.
