@@ -31,6 +31,11 @@ between objects that interact.
                                                     Essentially, it states that the classes should be as
                                                     decoupled from each other as possible.
 
+8th Design Principle:
+"The Hollywood Principle" - Don't call us, we'll call you - We allow low-level components
+                                                            to hook themselves into a system, but the high-level
+                                                            components determine when they are needed, and how.
+
 FAQs:
 Q. Where does the "Inversion" in DI Principle come from?
 
