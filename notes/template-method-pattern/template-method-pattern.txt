@@ -9,6 +9,10 @@ subclasses to provide the implementation for one or more steps
 The Template Method Pattern maximizes reuse among the
 subclasses.
 
+This pattern provides a fundamental
+method for code reuse that allows subclasses to
+specify behavior
+
 We often provide a "hook" in the template method.
 A hook is a method that is declared in the
 abstract class, but only given an empty
@@ -17,3 +21,13 @@ subclasses the ability to “hook into” the
 algorithm at various points, if they wish; a
 subclass is also free to ignore the hook.
 
+Difference between Strategy Pattern & Template Method Pattern:
+Strategy Pattern defines a family of
+algorithms and make them interchangeable.
+Since each algorithm is encapsulated, the client
+can use different algorithms easily
+
+Whereas, Template Method Pattern's job is to define the outline of an algorithm,
+but it lets the subclasses do some of the work. That
+way, it can have different implementations of an algorithm’s individual steps,
+but keep control over the algorithm’s structure.
