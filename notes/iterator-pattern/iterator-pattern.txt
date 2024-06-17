@@ -1,0 +1,11 @@
+Iterator Pattern Definition:
+The Iterator Pattern provides a way to access the elements of an aggregate object
+sequentially without exposing its underlying representation.
+
+The Iterator Pattern relies on an interface called Iterator.
+Iterator interface usually contains two methods; next() and hasNext().
+The hasNext() method tells us if there are
+more elements in the aggregate to iterate
+through.
+And The next() method returns the next object in the aggregate.
+
