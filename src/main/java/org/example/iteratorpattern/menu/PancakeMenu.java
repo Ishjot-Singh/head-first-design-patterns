@@ -5,7 +5,7 @@ import org.example.iteratorpattern.iterator.PancakeHouseIterator;
 
 import java.util.ArrayList;
 
-public class PancakeMenu {
+public class PancakeMenu implements Menu {
     ArrayList menuItems;
     public PancakeMenu() {
         menuItems = new ArrayList();
