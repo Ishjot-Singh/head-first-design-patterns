@@ -2,13 +2,14 @@ package org.example.iteratorpattern.waitress;
 
 import org.example.iteratorpattern.iterator.Iterator;
 import org.example.iteratorpattern.menu.DinerMenu;
+import org.example.iteratorpattern.menu.Menu;
 import org.example.iteratorpattern.menu.MenuItem;
 import org.example.iteratorpattern.menu.PancakeMenu;
 
 public class Waitress {
-    PancakeMenu pancakeHouseMenu;
-    DinerMenu dinerMenu;
-    public Waitress(PancakeMenu pancakeHouseMenu, DinerMenu dinerMenu) {
+    Menu pancakeHouseMenu;
+    Menu dinerMenu;
+    public Waitress(Menu pancakeHouseMenu, Menu dinerMenu) {
         this.pancakeHouseMenu = pancakeHouseMenu;
         this.dinerMenu = dinerMenu;
     }

@@ -3,7 +3,7 @@ package org.example.iteratorpattern.menu;
 import org.example.iteratorpattern.iterator.DinerMenuIterator;
 import org.example.iteratorpattern.iterator.Iterator;
 
-public class DinerMenu {
+public class DinerMenu implements Menu {
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
     MenuItem[] menuItems;
