@@ -9,3 +9,11 @@ more elements in the aggregate to iterate
 through.
 And The next() method returns the next object in the aggregate.
 
+The Iterator Pattern allows traversal of the elements
+of an aggregate without exposing the underlying
+implementation.
+
+Internal java.util implementation of the Iterator also has a remove() method
+which can be implemented.
+Collections such as ArrayList have an iterator method of their own. We have to provide
+one for native arrays (like int[]).

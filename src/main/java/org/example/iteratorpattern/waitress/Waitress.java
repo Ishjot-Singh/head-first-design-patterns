@@ -1,10 +1,9 @@
 package org.example.iteratorpattern.waitress;
 
-import org.example.iteratorpattern.iterator.Iterator;
-import org.example.iteratorpattern.menu.DinerMenu;
 import org.example.iteratorpattern.menu.Menu;
 import org.example.iteratorpattern.menu.MenuItem;
-import org.example.iteratorpattern.menu.PancakeMenu;
+
+import java.util.Iterator;
 
 public class Waitress {
     Menu pancakeHouseMenu;
@@ -14,8 +13,8 @@ public class Waitress {
         this.dinerMenu = dinerMenu;
     }
     public void printMenu() {
-        Iterator pancakeIterator = pancakeHouseMenu.createIterator();
         Iterator dinerIterator = dinerMenu.createIterator();
+        Iterator pancakeIterator = pancakeHouseMenu.createIterator();
         System.out.println("MENU\n----\nBREAKFAST");
         printMenu(pancakeIterator);
         System.out.println("\nLUNCH");

@@ -2,7 +2,9 @@ package org.example.iteratorpattern.iterator;
 
 import org.example.iteratorpattern.menu.MenuItem;
 
-public class DinerMenuIterator implements Iterator{
+import java.util.Iterator;
+
+public class DinerMenuIterator implements Iterator {
     MenuItem[] menuItem;
     int position = 0;
 
