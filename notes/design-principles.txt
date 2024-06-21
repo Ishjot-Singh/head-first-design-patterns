@@ -36,6 +36,9 @@ between objects that interact.
                                                             to hook themselves into a system, but the high-level
                                                             components determine when they are needed, and how.
 
+9th Design Principle:
+"Single Responsibility Principle" - A class should have only one reason to change.
+
 FAQs:
 Q. Where does the "Inversion" in DI Principle come from?
 
@@ -73,3 +76,11 @@ A. Dependency rot happens when you have high-level components depending on low-l
    The Hollywood Principle guides us to put decision-making in
    high-level modules that can decide how and when to call
    low level modules.
+
+Q. What is Cohesion and how does it relate to the Single Responsibility Principle?
+
+A. It is a measure of how closely a class or a module supports a single purpose.
+   We say that a module or class has high cohesion when it is designed around a set of related functions,
+   and we say it has low cohesion when it is designed around a set of unrelated functions.
+   Classes that adhere to the principle tend to have high cohesion and are more maintainable than classes that
+   take on multiple responsibilities and have low cohesion.
