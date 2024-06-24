@@ -15,7 +15,7 @@ subjects and observers are loosely coupled.
 Java has built-in support for the Observer pattern.
 
 Internally, a class called "Observable" exists under the java.util package. This class is what we called the Subject above.
-Out of the box, this class gives us all of the functionality, adding-removing-notifying-setting methods. So any of our concrete Subject classes will extend this class.
+Out of the box, this class gives us all the functionality, adding-removing-notifying-setting methods. So any of our concrete Subject classes will extend this class.
 For the "Observer" we have an interface, we override the update method for all of our observers.
 
 // PUSH IMPLEMENTATION - The observable pushes the state change to the observers
