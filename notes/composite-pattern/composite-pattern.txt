@@ -17,3 +17,22 @@ composites and leaf elements.
 A composite holds a set
 of children, those children may be other
 composites or leaf elements.
+
+Composite Pattern takes the Single Responsibility design principle and
+trades it for transparency. What’s transparency? Well, by allowing the
+Component interface to contain the child management operations and
+the leaf operations, a client can treat both composites and leaf nodes
+uniformly; so whether an element is a composite or leaf node becomes
+transparent to the client
+
+This is the pattern to be used when we
+have collections of objects with whole-part relationships
+and we want to be able to treat those objects uniformly.
+For ex: Imagine a graphical user interface; there
+        we’ll often find a top level component like a Frame or
+        a Panel, containing other components, like menus, text
+        panes, scrollbars and buttons. So our GUI consists
+        of several parts, but when we display it, we generally
+        think of it as a whole. We call the components that contain other
+        components, composite objects, and components that
+        don’t contain other components, leaf objects.
