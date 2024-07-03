@@ -2,3 +2,11 @@ State Pattern Definition:
 The State Pattern allows an object to alter its behavior
 when its internal state changes. The object will appear to
 change its class
+
+The class diagrams for the State and Strategy pattern are the same.
+They differ in their intent.
+With the State Pattern, we have a set of behaviors encapsulated in
+state objects; at any time the context is delegating to one of those
+states.
+With Strategy, the client usually specifies the strategy object that
+the context is composed with.
