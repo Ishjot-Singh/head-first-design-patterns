@@ -1,0 +1,16 @@
+Proxy Pattern ("Controlling Object Access") Definition:
+The Proxy Pattern provides a surrogate or
+placeholder for another object to control access to it.
+
+
+Proxies are used to control and manage access.
+
+A remote proxy acts as a local representative to a remote object.
+
+Q. What’s a “remote object?”
+A. It’s an object that lives in the heap of a different Java Virtual Machine
+   (or more generally, a remote object that is running in a different address space).
+
+Q. What’s a “local representative?”
+A. It’s an object that you can call local methods on
+   and have them forwarded on to the remote object.
