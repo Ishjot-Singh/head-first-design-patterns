@@ -14,3 +14,8 @@ A. It’s an object that lives in the heap of a different Java Virtual Machine
 Q. What’s a “local representative?”
 A. It’s an object that you can call local methods on
    and have them forwarded on to the remote object.
+
+Q. How does the Java Remote Method Invocation (RMI) help?
+
+A. RMI gives us a way to find objects in a remote JVM and allows us to invoke their
+   methods.
