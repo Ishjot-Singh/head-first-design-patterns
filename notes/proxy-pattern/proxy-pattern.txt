@@ -35,3 +35,7 @@ A. 1. Client object calls required method on the client helper object
    6. Client helper un-packages the returned values and returns
       them to the client object. To the client object, this was all
       transparent.
+
+
+Note: When you extend UnicastRemoteObject for Remote implementation, make sure to create a no-arg constructor which throws RemoteException.
+This is because UnicastRemoteObject's constructor does so.
