@@ -17,6 +17,9 @@ Few ways proxies control access:
 2. A virtual proxy controls access to a resource that is expensive to create.
 3. A protection proxy controls access to a resource based on access rights
 
+A caching proxy maintains a cache of previous created
+objects and when a request is made it returns cached object, if possible.
+
 Q. What’s a “remote object?”
 A. It’s an object that lives in the heap of a different Java Virtual Machine
    (or more generally, a remote object that is running in a different address space).
